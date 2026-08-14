@@ -1,0 +1,203 @@
+/* =========================================
+   1. GOOGLE FONTS IMPORT (Nunito)
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+/* =========================================
+   2. POPULAR CAUSES SECTION GENERAL
+========================================= */
+.popular-causes-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+  font-family: 'Nunito', sans-serif;
+  position: relative;
+}
+
+/* Header Badge Style */
+h5.causes-badge {
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: #ffbf00;
+  padding: 6px 18px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(255, 191, 0, 0.4);
+  border-radius: 3px;
+  background-color: transparent;
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+/* Header Title */
+.causes-main-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 42px;
+  font-weight: 900;
+  color: #0b1c17;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+/* =========================================
+   3. CAUSE CARD STYLES
+========================================= */
+.cause-card {
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cause-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Wrapper */
+.cause-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.cause-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.cause-card:hover .cause-img {
+  transform: scale(1.06);
+}
+
+/* Category Badge (Top Left of Image) */
+.category-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 3px;
+  backdrop-filter: blur(2px);
+}
+
+/* Card Body Content */
+.cause-content {
+  padding: 25px;
+}
+
+.progress-header {
+  margin-bottom: 8px;
+}
+
+.donate-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0b1c17;
+}
+
+/* Progress Bar Container */
+.cause-progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #eef0f2;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: visible;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #ffbf00;
+  border-radius: 4px;
+  position: relative;
+  transition: width 0.8s ease-in-out;
+}
+
+/* Black Tooltip with Percent */
+.percent-tooltip {
+  position: absolute;
+  right: -15px;
+  top: -28px;
+  background-color: #212529;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 6px;
+  border-radius: 3px;
+}
+
+.percent-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 4px 4px 0;
+  border-style: solid;
+  border-color: #212529 transparent;
+}
+
+/* Stats Row (Raised / Goals) */
+.cause-stats-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 700;
+  color: #5d666d;
+  margin-bottom: 18px;
+}
+
+/* Cause Title */
+.cause-title {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.4;
+  margin-bottom: 22px;
+}
+
+.cause-title a {
+  color: #0b1c17;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cause-title a:hover {
+  color: #ffbf00;
+}
+
+/* Donate Button */
+.cause-donate-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffbf00;
+  color: #0b1c17;
+  font-size: 13px;
+  font-weight: 900;
+  padding: 12px 22px;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.cause-donate-btn:hover {
+  background-color: #0b1c17;
+  color: #ffffff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .causes-main-title {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,620 @@
+/* =========================================================
+   CATEGORY SECTION
+========================================================= */
+
+.category-section {
+    width: 100%;
+    padding: 90px 0 35px;
+
+    background: #ffffff;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CATEGORY LABEL
+========================================================= */
+
+.category-label {
+    width: 268px;
+    height: 38px;
+
+    margin: 0 auto 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #f0d58e;
+
+    color: #f5b400;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CATEGORY TITLE
+========================================================= */
+
+.category-title {
+    margin: 0 0 50px;
+
+    color: #0b2925;
+
+    font-size: 58px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   SLIDER VIEWPORT
+
+   IMPORTANT:
+   No horizontal scrollbar.
+   No half card will appear at the sides.
+========================================================= */
+
+.category-slider {
+    width: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CATEGORY CONTAINER
+
+   DESKTOP:
+   6 cards are arranged horizontally.
+
+   245 x 6 = 1470
+   30 x 5  = 150
+   TOTAL   = 1620px
+
+   The 1620px content stays centered, giving equal
+   left and right space.
+========================================================= */
+
+.category-container {
+    width: 1620px;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    gap: 30px;
+
+    padding: 0;
+    margin: 0 auto;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    transition: transform 0.6s ease-in-out;
+}
+
+
+/* =========================================================
+   CATEGORY CARD
+========================================================= */
+
+.category-card {
+    width: 245px;
+    min-width: 245px;
+
+    height: 310px;
+
+    flex: 0 0 245px;
+
+    padding: 6px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e3e3;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   CATEGORY IMAGE
+========================================================= */
+
+.category-card img {
+    width: 231px;
+    height: 232px;
+
+    display: block;
+
+    margin: 0 auto;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition:
+        transform 0.35s ease;
+}
+
+
+/* =========================================================
+   HOVER CARD
+========================================================= */
+
+.category-card:hover {
+    border-color: #f5b400;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================================
+   HOVER IMAGE ZOOM
+========================================================= */
+
+.category-card:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   CATEGORY TEXT
+========================================================= */
+
+.category-card h3 {
+    margin: 24px 0 0;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    line-height: 27px;
+
+    color: #102c29;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+/* =========================================================
+   HOVER TEXT
+========================================================= */
+
+.category-card:hover h3 {
+    color: #f5b400;
+}
+
+
+/* =========================================================
+   ACTIVE CARD
+========================================================= */
+
+.category-card.active {
+    border-color: #f5b400;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================================
+   ACTIVE IMAGE
+========================================================= */
+
+.category-card.active img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   ACTIVE TEXT
+========================================================= */
+
+.category-card.active h3 {
+    color: #f5b400;
+}
+
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.slider-dots {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 35px;
+}
+
+
+/* =========================================================
+   NORMAL DOT
+========================================================= */
+
+.slider-dots .dot {
+    width: 12px;
+    height: 12px;
+
+    padding: 0;
+
+    border: 1px solid #b5b5b5;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    position: relative;
+
+    transition:
+        width 0.3s ease,
+        height 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* =========================================================
+   ACTIVE DOT
+========================================================= */
+
+.slider-dots .active-dot {
+    width: 30px;
+    height: 30px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f4f4f4;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   YELLOW CENTER OF ACTIVE DOT
+========================================================= */
+
+.slider-dots .active-dot::after {
+    content: "";
+
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #f5b400;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1700px AND ABOVE
+
+   6 COMPLETE CARDS
+========================================================= */
+
+@media (min-width: 1700px) {
+
+    .category-slider {
+        width: 100%;
+    }
+
+    .category-container {
+        width: 1620px;
+        max-width: 1620px;
+
+        gap: 30px;
+
+        margin: 0 auto;
+    }
+
+    .category-card {
+        width: 245px;
+        min-width: 245px;
+        flex: 0 0 245px;
+    }
+
+    .category-card img {
+        width: 231px;
+        height: 232px;
+    }
+}
+
+
+/* =========================================================
+   DESKTOP / LAPTOP
+   1400px - 1699px
+
+   5 COMPLETE CARDS
+
+   This prevents the 6th card from appearing halfway.
+========================================================= */
+
+@media (max-width: 1699px) and (min-width: 1400px) {
+
+    .category-container {
+        width: 1320px;
+        max-width: 1320px;
+
+        gap: 25px;
+    }
+
+    .category-card {
+        width: 245px;
+        min-width: 245px;
+        flex: 0 0 245px;
+    }
+
+    .category-card img {
+        width: 231px;
+        height: 232px;
+    }
+
+    .category-title {
+        font-size: 55px;
+    }
+}
+
+
+/* =========================================================
+   LAPTOP
+   1200px - 1399px
+
+   5 COMPLETE CARDS
+========================================================= */
+
+@media (max-width: 1399px) and (min-width: 993px) {
+
+    .category-section {
+        padding-top: 80px;
+    }
+
+    .category-title {
+        font-size: 50px;
+
+        margin-bottom: 45px;
+    }
+
+    .category-container {
+        width: 1100px;
+        max-width: 1100px;
+
+        gap: 20px;
+    }
+
+    .category-card {
+        width: 204px;
+        min-width: 204px;
+
+        flex: 0 0 204px;
+
+        height: 290px;
+    }
+
+    .category-card img {
+        width: 190px;
+        height: 210px;
+    }
+
+    .category-card h3 {
+        margin-top: 20px;
+
+        font-size: 19px;
+
+        line-height: 25px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 992px
+
+   4 COMPLETE CARDS
+========================================================= */
+
+@media (max-width: 992px) and (min-width: 769px) {
+
+    .category-section {
+        padding-top: 70px;
+    }
+
+    .category-title {
+        font-size: 45px;
+
+        margin-bottom: 40px;
+    }
+
+    .category-container {
+        width: 740px;
+        max-width: 740px;
+
+        gap: 15px;
+    }
+
+    .category-card {
+        width: 173px;
+        min-width: 173px;
+
+        flex: 0 0 173px;
+
+        height: 270px;
+    }
+
+    .category-card img {
+        width: 159px;
+        height: 185px;
+    }
+
+    .category-card h3 {
+        margin-top: 17px;
+
+        font-size: 17px;
+
+        line-height: 22px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   BELOW 768px
+
+   1 COMPLETE CARD
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .category-section {
+        padding: 60px 15px 30px;
+    }
+
+    .category-label {
+        width: 230px;
+        height: 35px;
+
+        font-size: 15px;
+    }
+
+    .category-title {
+        font-size: 36px;
+
+        margin-bottom: 35px;
+    }
+
+    .category-slider {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+
+        overflow: hidden;
+    }
+
+    .category-container {
+        width: 100%;
+        max-width: 100%;
+
+        gap: 15px;
+
+        overflow: hidden;
+    }
+
+    .category-card {
+        width: 100%;
+        min-width: 100%;
+
+        flex: 0 0 100%;
+
+        height: 290px;
+    }
+
+    .category-card img {
+        width: 100%;
+        height: 220px;
+
+        object-fit: cover;
+    }
+
+    .category-card h3 {
+        margin-top: 18px;
+
+        font-size: 18px;
+
+        line-height: 24px;
+    }
+
+    .slider-dots {
+        margin-top: 25px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .category-section {
+        padding-top: 50px;
+    }
+
+    .category-label {
+        width: 210px;
+        height: 34px;
+
+        font-size: 14px;
+    }
+
+    .category-title {
+        font-size: 30px;
+
+        margin-bottom: 30px;
+    }
+
+    .category-card {
+        height: 270px;
+    }
+
+    .category-card img {
+        height: 200px;
+    }
+
+    .category-card h3 {
+        margin-top: 15px;
+
+        font-size: 17px;
+    }
+}

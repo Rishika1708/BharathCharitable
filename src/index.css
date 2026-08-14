@@ -1,0 +1,714 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap');
+/* =========================================
+   GLOBAL
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  background: #fff;
+  color: #222;
+}
+a {
+  text-decoration: none;
+}
+button {
+  font-family: inherit;
+}
+/* =========================================
+   HERO HEADER
+========================================= */
+.hero-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  color: #fff;
+}
+/* =========================================
+   NAVBAR
+========================================= */
+.donatia-navbar {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+}
+.navbar-inner {
+  min-height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+/* =========================================
+   BHARATH LOGO
+========================================= */
+.bharath-logo {
+  display: flex;
+  align-items: center;
+  width: 360px;
+  height: 105px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.bharath-logo img {
+  display: block;
+  width: 70%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  object-position: left center;
+}
+/* =========================================
+   DESKTOP MENU
+========================================= */
+.desktop-menu {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  margin-left: auto;
+  margin-right: 35px;
+}
+.menu-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+.menu-link:hover {
+  color: #ffbf00;
+}
+.menu-link.active {
+  color: #ffbf00;
+}
+/* =========================================
+   NAVBAR ACTIONS
+========================================= */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+/* =========================================
+   DONATE NOW BUTTON
+========================================= */
+.donate-button {
+  min-width: 145px;
+  height: 66px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+  background: #ffbf00;
+  color: #111111;
+  border: 1px solid #ffbf00;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+/* =========================================
+   HOVER BACKGROUND
+========================================= */
+.donate-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  transform: translateX(-100%);
+  transition:
+    transform 0.4s cubic-bezier(.77, 0, .18, 1);
+  z-index: 0;
+}
+/* =========================================
+   KEEP CONTENT ABOVE EFFECT
+========================================= */
+.donate-button span,
+.donate-button i {
+  position: relative;
+  z-index: 2;
+}
+/* =========================================
+   HEART ICON
+========================================= */
+.donate-button i:first-child {
+  font-size: 19px;
+  transition:
+    transform 0.35s ease;
+}
+/* =========================================
+   ARROW ICON
+========================================= */
+.donate-button i:last-child {
+  font-size: 15px;
+  transition:
+    transform 0.35s ease;
+}
+/* =========================================
+   HOVER
+========================================= */
+.donate-button:hover::before {
+  transform: translateX(0);
+}
+.donate-button:hover {
+  color: #111111;
+  transform: translateY(-3px);
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.donate-button:hover i:first-child {
+  transform: scale(1.15);
+}
+.donate-button:hover i:last-child {
+  transform: translate(4px, -4px);
+}
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+.menu-toggle {
+  display: none;
+  width: 55px;
+  height: 55px;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  cursor: pointer;
+}
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: #ffbf00;
+}
+/* =========================================
+   LOGO
+========================================= */
+.donatia-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+.logo-symbol {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #ffbf00;
+  color: #ffbf00;
+  font-size: 29px;
+  transform: rotate(-8deg);
+}
+.logo-text strong {
+  display: block;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1;
+}
+.logo-text small {
+  display: block;
+  margin-top: 5px;
+  color: #bfc7c1;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+/* =========================================
+   DESKTOP MENU
+========================================= */
+.desktop-menu {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  margin-left: auto;
+  margin-right: 40px;
+}
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all .3s ease;
+}
+.menu-link i {
+  font-size: 12px;
+}
+.menu-link:hover,
+.menu-link.active {
+  color: #ffbf00;
+}
+/* =========================================
+   NAVBAR ACTIONS
+========================================= */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+/* =========================================
+   DEMO BUTTON
+========================================= */
+.demo-button {
+  min-height: 66px;
+  padding:
+    0 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffbf00;
+  color: #171717;
+  font-size: 16px;
+  font-weight: 800;
+}
+.demo-button i {
+  font-size: 18px;
+}
+.demo-button:hover {
+  background: #fff;
+  color: #171717;
+}
+/* =========================================
+   MENU BUTTON
+========================================= */
+.menu-toggle {
+  width: 67px;
+  height: 67px;
+  border: none;
+  background:
+    rgba(255,255,255,0.17);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.menu-toggle span {
+  display: block;
+  width: 29px;
+  height: 2px;
+  background: #ffbf00;
+}
+/* =========================================
+   HERO
+========================================= */
+.donatia-hero {
+  min-height: 820px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(
+      90deg,
+      #061b15 0%,
+      #08251d 50%,
+      #061b15 100%
+    );
+}
+/* Background image */
+.donatia-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    url("src/assets/Images/banner_3_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: .55;
+}
+/* Dark overlay */
+.hero-dark-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,24,18,.95),
+      rgba(0,35,27,.75),
+      rgba(0,24,18,.60)
+    );
+}
+/* =========================================
+   HERO CONTAINER
+========================================= */
+.hero-container {
+  position: relative;
+  z-index: 5;
+  padding-top: 30px;
+}
+/* =========================================
+   HERO CONTENT
+========================================= */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  padding: 40px 0 50px;
+}
+/* =========================================
+   SCRIPT TITLE
+========================================= */
+.hero-script {
+  margin-bottom: 20px;
+  color: #ffbf00;
+  font-family: "Caveat", cursive;
+  font-size: 30px;
+  font-weight: 700;
+}
+/* =========================================
+   HERO HEADING
+========================================= */
+.hero-content h1 {
+  max-width: 900px;
+  margin-bottom: 25px;
+  color: #fff;
+  font-size: clamp(55px, 5.2vw, 82px);
+  line-height: .98;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.hero-content h1 span.animated-word {
+  color: #ffbf00;
+  font-style: italic;
+  display: inline-block;
+  margin-left: 10px;
+  animation: zoomInWord 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes zoomInWord {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.08); /* லேசான Bounce Effect */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* =========================================
+   HERO DESCRIPTION
+========================================= */
+.hero-content p {
+  max-width: 780px;
+  margin-bottom: 42px;
+  color:
+    rgba(255,255,255,.72);
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 500;
+}
+/* =========================================
+   DISCOVER BUTTON
+========================================= */
+.hero-discover-btn {
+  min-width: 220px;
+  min-height: 68px;
+  padding:
+    0 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #ffbf00;
+  color: #111;
+  font-size: 15px;
+  font-weight: 900;
+  transition:
+    all .3s ease;
+}
+.hero-discover-btn:hover {
+  background: #fff;
+  color: #111;
+  transform:
+    translateY(-3px);
+}
+/* =========================================
+   CHILD IMAGE
+========================================= */
+.hero-image-wrapper {
+  position: relative;
+  height: 620px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.child-image {
+  position: relative;
+  z-index: 5;
+  width: 410px;
+  height: 570px;
+  overflow: hidden;
+  border-radius:
+    48% 48% 0 0;
+}
+.child-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+/* =========================================
+   YELLOW SPLASH
+========================================= */
+.yellow-splash {
+  position: absolute;
+  z-index: 4;
+  background: #ffbf00;
+  border-radius: 50%;
+  filter:
+    blur(1px);
+}
+.splash-one {
+  width: 180px;
+  height: 180px;
+  top: 90px;
+  right: 50px;
+  opacity: .9;
+}
+.splash-two {
+  width: 100px;
+  height: 100px;
+  top: 250px;
+  left: 50px;
+  opacity: .8;
+}
+.splash-three {
+  width: 55px;
+  height: 55px;
+  top: 120px;
+  left: 90px;
+}
+/* =========================================
+   DECORATIVE LINE (Fix Positioning)
+========================================= */
+.hero-decoration {
+  position: absolute;
+  top: -180px;      /* மேல தூக்கி logo கிட்ட இருந்து தொடங்க வைக்க */
+  left: -180px;     /* இடது பக்கம் தள்ளி text-க்கு இடதுபுறம் கொண்டு போக */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-decoration img {
+  width: 190px;     /* படம் பெரிசா இருந்தா தான் loop சுழி கரெக்ட்டா வரும் */
+  height: auto;
+  object-fit: contain;
+}
+
+/* =========================================
+   BUTTON & HAND WRAPPER (Fix Alignment)
+========================================= */
+.hero-btn-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15px;
+  z-index: 2;
+}
+
+.hero-discover-btn {
+  min-width: 220px;
+  min-height: 68px;
+  padding: 0 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #ffbf00;
+  color: #111;
+  font-size: 15px;
+  font-weight: 900;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 3;
+}
+
+/* Floating Hand Icon Animation */
+.hero-hand-animated {
+  position: absolute;
+  left: -120px; /* பட்டனின் இடது பின்புறத்தில் வைக்க */
+  bottom: -20px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-hand-animated img {
+  width: 160px;
+  height: auto;
+  opacity: 0.9;
+  /* மிதமான அனிமேஷன் (Floating Effect) */
+  animation: floatHand 3s ease-in-out infinite;
+}
+/* கை சின்னத்திற்கான மெல்லிய Floating Animation */
+@keyframes floatHand {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(3deg);
+  }
+}
+
+/* =========================================
+   BOTTOM WAVE
+========================================= */
+.hero-bottom-wave {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 10;
+}
+.hero-bottom-wave svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.hero-bottom-wave path {
+  fill: #fff;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 1199px) {
+  .desktop-menu {
+    gap: 20px;
+    margin-right: 20px;
+  }
+  .menu-link {
+    font-size: 14px;
+  }
+  .demo-button {
+    padding: 0 18px;
+  }
+}
+@media (max-width: 991px) {
+  .desktop-menu {
+    display: none;
+  }
+  .navbar-actions {
+    margin-left: auto;
+  }
+  .demo-button {
+    display: none;
+  }
+  .donatia-hero {
+    min-height: auto;
+    padding-bottom: 80px;
+  }
+  .hero-container {
+    padding-top: 140px;
+  }
+  .hero-content {
+    padding:
+      50px 0 20px;
+  }
+  .hero-content h1 {
+    font-size: 60px;
+  }
+  .hero-image-wrapper {
+    height: 520px;
+    margin-top: 20px;
+  }
+  .child-image {
+    width: 340px;
+    height: 480px;
+  }
+}
+@media (max-width: 575px) {
+  .navbar-inner {
+    min-height: 80px;
+  }
+  .logo-symbol {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+  .logo-text strong {
+    font-size: 23px;
+  }
+  .logo-text small {
+    font-size: 8px;
+  }
+  .menu-toggle {
+    width: 50px;
+    height: 50px;
+  }
+  .menu-toggle span {
+    width: 22px;
+  }
+  .donatia-hero {
+    min-height: 900px;
+  }
+  .hero-container {
+    padding-top: 100px;
+  }
+  .hero-content {
+    padding:
+      50px 0 0;
+  }
+  .hero-script {
+    font-size: 24px;
+  }
+  .hero-content h1 {
+    font-size: 47px;
+    letter-spacing: -1px;
+  }
+  .hero-content p {
+    font-size: 15px;
+  }
+  .hero-image-wrapper {
+    height: 400px;
+  }
+  .child-image {
+    width: 260px;
+    height: 360px;
+  }
+  .hero-decoration {
+    opacity: .5;
+  }
+  .hero-bottom-wave {
+    height: 70px;
+  }
+}

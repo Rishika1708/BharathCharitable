@@ -1,0 +1,320 @@
+ /* =========================================================
+    VOLUNTEER SECTION
+========================================================= */
+
+.volunteer-section {
+  width: 100%;
+  padding: 20px 0 80px;
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   VOLUNTEER WRAPPER
+========================================================= */
+
+.volunteer-wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: stretch;
+
+  position: relative;
+}
+
+
+/* =========================================================
+   LEFT IMAGE
+========================================================= */
+
+.volunteer-left {
+  width: 50%;
+  min-height: 320px;
+
+  overflow: hidden;
+}
+
+
+.volunteer-left img {
+  width: 100%;
+  height: 100%;
+
+  min-height: 320px;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* =========================================================
+   RIGHT CONTENT AREA
+========================================================= */
+
+.volunteer-right {
+  width: 50%;
+  min-height: 320px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* =========================================================
+   DARK OVERLAY
+========================================================= */
+
+.volunteer-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.68);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.volunteer-content {
+  position: relative;
+
+  z-index: 2;
+
+  padding: 45px 35px 40px;
+}
+
+
+.volunteer-content h2 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-size: 27px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+}
+
+
+.volunteer-content p {
+  margin: 0 0 18px;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+
+  max-width: 430px;
+}
+
+
+/* =========================================================
+   VOLUNTEER LIST
+========================================================= */
+
+.volunteer-content ul {
+  list-style: none;
+
+  margin: 0 0 22px;
+
+  padding: 0;
+}
+
+
+.volunteer-content ul li {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 8px;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  line-height: 1.4;
+}
+
+
+.volunteer-content ul li i {
+  color: #ffbd00;
+
+  font-size: 13px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   VOLUNTEER BUTTON
+========================================================= */
+
+.volunteer-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px 15px;
+
+  background: #ffbd00;
+
+  color: #071f1d;
+
+  text-decoration: none;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+
+.volunteer-btn i {
+  font-size: 11px;
+}
+
+
+.volunteer-btn:hover {
+  background: #ffffff;
+
+  color: #071f1d;
+}
+
+
+/* =========================================================
+   HEART DECORATION
+========================================================= */
+
+.volunteer-heart {
+  position: absolute;
+
+  right: -5px;
+  bottom: -8px;
+
+  width: 65px;
+  height: 65px;
+
+  z-index: 3;
+}
+
+
+.volunteer-heart .bi-heart {
+  position: absolute;
+
+  font-size: 55px;
+
+  color: #ffbd00;
+}
+
+
+.volunteer-heart .bi-heart-fill {
+  position: absolute;
+
+  left: 19px;
+  top: 15px;
+
+  font-size: 27px;
+
+  color: transparent;
+
+  -webkit-text-stroke: 2px #ffbd00;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .volunteer-wrapper {
+    max-width: 700px;
+  }
+
+
+  .volunteer-content {
+    padding: 35px 25px;
+  }
+
+
+  .volunteer-content h2 {
+    font-size: 23px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .volunteer-section {
+    padding: 50px 15px 60px;
+  }
+
+
+  .volunteer-wrapper {
+    display: block;
+  }
+
+
+  .volunteer-left,
+  .volunteer-right {
+    width: 100%;
+  }
+
+
+  .volunteer-left {
+    min-height: 280px;
+  }
+
+
+  .volunteer-left img {
+    min-height: 280px;
+  }
+
+
+  .volunteer-right {
+    min-height: 320px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+  .volunteer-content {
+    padding: 30px 22px;
+  }
+
+
+  .volunteer-content h2 {
+    font-size: 22px;
+  }
+
+
+  .volunteer-content p {
+    font-size: 11px;
+  }
+
+}

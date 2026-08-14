@@ -1,0 +1,194 @@
+/* =========================================
+   PARTNER / CHARITY LOGO SECTION
+========================================= */
+
+.partner-logo-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 55px 0 70px;
+  overflow: hidden;
+}
+
+.partner-logo-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================
+   LOGO TRACK
+========================================= */
+
+.partner-logo-track {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   EACH LOGO
+========================================= */
+
+.partner-logo-box {
+  flex: 0 0 calc(20% - 15px);
+
+  height: 102px;
+
+  background: #f4fafc;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.35s ease;
+
+  overflow: hidden;
+}
+
+.partner-logo-box img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  padding: 12px 22px;
+
+  transition: transform 0.35s ease;
+}
+
+
+/* =========================================
+   LOGO HOVER
+========================================= */
+
+.partner-logo-box:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.partner-logo-box:hover img {
+  transform: scale(1.06);
+}
+
+
+/* =========================================
+   ARROWS
+========================================= */
+
+.partner-arrow {
+  position: absolute;
+
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid #e5e5e5;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  z-index: 5;
+
+  transition: all 0.3s ease;
+
+  color: #102b27;
+
+  font-size: 17px;
+}
+
+.partner-arrow:hover {
+  background: #ffbf00;
+
+  border-color: #ffbf00;
+
+  color: #102b27;
+}
+
+
+/* =========================================
+   LEFT / RIGHT ARROW POSITION
+========================================= */
+
+.partner-arrow-left {
+  left: -18px;
+}
+
+.partner-arrow-right {
+  right: -18px;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+  .partner-logo-container {
+    padding: 0 35px;
+  }
+
+  .partner-logo-box {
+    flex: 0 0 calc(33.333% - 12px);
+  }
+
+  .partner-logo-box:nth-child(n + 4) {
+    display: none;
+  }
+
+  .partner-arrow-left {
+    left: 0;
+  }
+
+  .partner-arrow-right {
+    right: 0;
+  }
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 576px) {
+
+  .partner-logo-section {
+    padding: 40px 0 50px;
+  }
+
+  .partner-logo-container {
+    padding: 0 35px;
+  }
+
+  .partner-logo-box {
+    flex: 0 0 100%;
+    height: 110px;
+  }
+
+  .partner-logo-box:nth-child(n + 2) {
+    display: none;
+  }
+
+  .partner-arrow {
+    width: 34px;
+    height: 34px;
+  }
+}
