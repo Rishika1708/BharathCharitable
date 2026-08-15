@@ -344,7 +344,7 @@ button {
   position: absolute;
   inset: 0;
   background-image:
-    url("src/assets/Images/banner_3_bg.jpg");
+    url("./assets/images/banner_3_bg.jpg");
   background-size: cover;
   background-position: center;
   opacity: .55;

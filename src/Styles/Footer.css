@@ -8,11 +8,8 @@
   min-height: 520px;
   padding-top: 100px;
   background:
-    linear-gradient(
-      rgba(15, 18, 20, 0.78),
-      rgba(15, 18, 20, 0.88)
-    ),
-    url("/images/footer-bg.jpg");
+    radial-gradient(circle at top left, rgba(247, 195, 0, 0.22), transparent 34%),
+    linear-gradient(135deg, rgba(8, 55, 92, 0.98), rgba(19, 28, 35, 0.98));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

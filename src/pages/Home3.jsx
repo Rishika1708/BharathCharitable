@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Header from "../components/Header";
+import Header from "../Components/Header";
 import "./styles/Home3.css"; 
 import PopularCauses from '../Components/PopularCauses';
 import EventsPrograms from '../Components/EventsPrograms';
@@ -15,8 +15,10 @@ import LatestNews from "../Components/LatestNews";
 import Footer from "../Components/Footer";
 
 // 1. Assets Import
-import heroLineImg from "../assets/Images/home3_shapes_line.png"; 
-import handIconImg from "../assets/Images/home3_shapes_hand1.png";
+import heroLineImg from "../assets/images/home3_shapes_line.png"; 
+import handIconImg from "../assets/images/home3_shapes_hand1.png";
+import bannerImg from "../assets/images/banner_3_img.png";
+import aboutImg from "../assets/images/about_3_img.jpeg";
 
 const Home3 = () => {
   // வார்த்தைகள் மாறுவதற்கான Array & State
@@ -94,7 +96,7 @@ const Home3 = () => {
 
                 <div className="child-image">
                   <img
-                    src="src/assets/Images/banner_3_img.png"
+                    src={bannerImg}
                     alt="Happy child"
                   />
                 </div>
@@ -127,7 +129,7 @@ const Home3 = () => {
             {/* Main Image Holder */}
             <div className="sketch-img-holder">
               <img
-                src="src/assets/Images/about_3_img.jpeg"
+                src={aboutImg}
                 alt="Child smiling"
                 className="sketch-img"
               />
