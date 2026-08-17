@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "../Styles/EventsPrograms.css";
 
 // 1. IMAGES IMPORT
-import eventImg1 from "../assets/images/event_img_1.jpg";
-import eventImg2 from "../assets/images/event_img_2.jpg";
-import eventImg3 from "../assets/images/event_img_3.jpg";
-import eventImg4 from "../assets/images/event_img_4.jpg";
+import eventImg1 from "../assets/Images/event_img_1.jpg";
+import eventImg2 from "../assets/Images/event_img_2.jpg";
+import eventImg3 from "../assets/Images/event_img_3.jpg";
+import eventImg4 from "../assets/Images/event_img_4.jpg";
 
 const EventsPrograms = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
