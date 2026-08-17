@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Header from "../Components/Header";
 import "./styles/Home3.css"; 
-import PopularCauses from '../Components/PopularCauses';
-import EventsPrograms from '../Components/EventsPrograms';
+import PopularCauses from "../Components/PopularCauses";
+import EventsPrograms from "../Components/EventsPrograms";
 import CategorySlider from "../Components/CategorySlider";
 import NeedPeople from "../Components/NeedPeople";
 import ScrollingWords from "../Components/ScrollingWords";
