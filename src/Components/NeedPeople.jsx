@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../Styles/NeedPeople.css";
 
-import needLeft from "../assets/images/need-left.jpeg";
-import needRight from "../assets/images/need-right.jpeg";
+import needLeft from "../assets/images/need-left.jpg";
+import needRight from "../assets/images/need-right.jpg";
 import heartImage from "../assets/images/heart-image.png";
 
 const NeedPeople = () => {
