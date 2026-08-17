@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import donationImage from "../assets/images/donation-img.jpeg";
+import donationImg from "../assets/images/donation-img.jpg";
 import donationBg from "../assets/images/donation-bg.jpg";
 import "../Styles/DonationSection.css";
 
