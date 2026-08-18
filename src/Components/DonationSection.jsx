@@ -16,7 +16,7 @@ const DonationSection = () => {
       setAmount(Number(value));
     }
   };
-
+import aboutImg from "../assets/images/about_3_img.jpeg";
   return (
     <section
       className="donation-section"
