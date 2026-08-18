@@ -16,7 +16,7 @@ const DonationSection = () => {
       setAmount(Number(value));
     }
   };
-import aboutImg from "../assets/images/about_3_img.jpeg";
+
   return (
     <section
       className="donation-section"
@@ -37,10 +37,12 @@ import aboutImg from "../assets/images/about_3_img.jpeg";
           {/* LEFT SIDE */}
           <div className="donation-content">
 
+            {/* Label */}
             <div className="donation-label">
               MAKE A DIFFERENCE
             </div>
 
+            {/* Heading */}
             <h2>
               Your Donation Can
               <br />
@@ -86,6 +88,7 @@ import aboutImg from "../assets/images/about_3_img.jpeg";
                 </button>
               ))}
 
+              {/* Custom Amount */}
               <button
                 type="button"
                 className={
@@ -106,7 +109,6 @@ import aboutImg from "../assets/images/about_3_img.jpeg";
               className="donate-now-btn"
             >
               DONATE NOW
-
               <i className="bi bi-arrow-up-right"></i>
             </button>
 
@@ -114,13 +116,11 @@ import aboutImg from "../assets/images/about_3_img.jpeg";
 
           {/* RIGHT IMAGE */}
           <div className="donation-image-wrapper">
-
             <img
               src={donationImg}
               alt="Child receiving support"
               className="donation-image"
             />
-
           </div>
 
         </div>
@@ -128,5 +128,4 @@ import aboutImg from "../assets/images/about_3_img.jpeg";
     </section>
   );
 };
-
 export default DonationSection;
