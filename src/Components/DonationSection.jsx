@@ -24,35 +24,22 @@ const DonationSection = () => {
         "--donation-bg": `url(${donationBg})`,
       }}
     >
-
-      {/* =========================================
-          TOP BACKGROUND DARK OVERLAY
-      ========================================= */}
+      {/* TOP BACKGROUND DARK OVERLAY */}
       <div className="donation-bg-overlay"></div>
 
-
-      {/* =========================================
-          TOP TORN / CRACK EFFECT
-      ========================================= */}
+      {/* TOP TORN / CRACK EFFECT */}
       <div className="donation-top-crack"></div>
 
-
-      {/* =========================================
-          MAIN CONTENT
-      ========================================= */}
+      {/* MAIN CONTENT */}
       <div className="container donation-container">
-
         <div className="donation-card">
 
-          {/* =====================================
-              LEFT SIDE
-          ====================================== */}
+          {/* LEFT SIDE */}
           <div className="donation-content">
 
             <div className="donation-label">
               MAKE A DIFFERENCE
             </div>
-
 
             <h2>
               Your Donation Can
@@ -60,28 +47,22 @@ const DonationSection = () => {
               Change Someone's Life
             </h2>
 
-
             {/* Description */}
             <div className="donation-description">
-
               <p>
                 We've granted more than 120,000 wishes all over
                 the world. Your generous donation can help us
                 continue making a difference.
               </p>
-
             </div>
 
-
-            {/* Donation title */}
+            {/* Donation Title */}
             <h4>
               Your Donation:
             </h4>
 
-
-            {/* Amount display */}
+            {/* Amount Display */}
             <div className="donation-amount-box">
-
               <span className="dollar-icon">
                 $
               </span>
@@ -89,15 +70,12 @@ const DonationSection = () => {
               <span className="amount-value">
                 {amount}
               </span>
-
             </div>
 
-
-            {/* Amount buttons */}
+            {/* Amount Buttons */}
             <div className="donation-buttons">
 
               {amounts.map((value) => (
-
                 <button
                   key={value}
                   type="button"
@@ -106,9 +84,7 @@ const DonationSection = () => {
                 >
                   ${value}
                 </button>
-
               ))}
-
 
               <button
                 type="button"
@@ -124,8 +100,7 @@ const DonationSection = () => {
 
             </div>
 
-
-            {/* Donate button */}
+            {/* Donate Button */}
             <button
               type="button"
               className="donate-now-btn"
@@ -133,19 +108,15 @@ const DonationSection = () => {
               DONATE NOW
 
               <i className="bi bi-arrow-up-right"></i>
-
             </button>
 
           </div>
 
-
-          {/* =====================================
-              RIGHT IMAGE
-          ====================================== */}
+          {/* RIGHT IMAGE */}
           <div className="donation-image-wrapper">
 
             <img
-              src={donationImage}
+              src={donationImg}
               alt="Child receiving support"
               className="donation-image"
             />
@@ -153,9 +124,7 @@ const DonationSection = () => {
           </div>
 
         </div>
-
       </div>
-
     </section>
   );
 };

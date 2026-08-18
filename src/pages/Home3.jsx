@@ -15,10 +15,10 @@ import LatestNews from "../Components/LatestNews";
 import Footer from "../Components/Footer";
 
 // 1. Assets Import
-import heroLineImg from "../assets/Images/home3_shapes_line.png"; 
-import handIconImg from "../assets/Images/home3_shapes_hand1.png";
-// import bannerImg from "../assets/Images/banner_3_img.png";
-// import aboutImg from "../assets/Images/about_3_img.jpeg";
+import heroLineImg from "../assets/images/home3_shapes_line.png"; 
+import handIconImg from "../assets/images/home3_shapes_hand1.png";
+import bannerImg from "../assets/images/banner_3_img.png";
+import aboutImg from "../assets/images/about_3_img.jpeg";
 
 const Home3 = () => {
   // வார்த்தைகள் மாறுவதற்கான Array & State
