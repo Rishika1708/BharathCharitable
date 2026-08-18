@@ -34,7 +34,7 @@
   position: relative;
   height: 600px; /* TALLER HEIGHT */
   min-height: 480px;
-  background-image: url("../assets/Images/event_3_banner_img.jpg");
+  background-image: url("../assets/images/event_3_banner_img.jpg");
   background-size: cover;
   background-position: center;
   padding: 40px 35px; /* Padding balanced */
