@@ -2,77 +2,107 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="donatia-navbar">
+    <nav className="navbar navbar-expand-lg donatia-navbar">
       <div className="container">
-        <div className="navbar-inner">
-
-          {/* =========================
-              BHARATH LOGO
-          ========================== */}
-          <Link to="/" className="bharath-logo">
-            <img
-              src="public\NGO_logo.png"
-              alt="Bharath Charitable Foundation"
-            />
-          </Link>
-
-          {/* =========================
-    NAVIGATION
-========================== */}
-<div className="desktop-menu">
-
-  <Link to="/" className="menu-link active">
-    Home <i className="bi bi-chevron-down"></i>
-  </Link>
-
-  <Link to="/donations" className="menu-link">
-    Donations <i className="bi bi-chevron-down"></i>
-  </Link>
-
-  <Link to="/events" className="menu-link">
-    Events <i className="bi bi-chevron-down"></i>
-  </Link>
-
-  <Link to="/pages" className="menu-link">
-    Pages <i className="bi bi-chevron-down"></i>
-  </Link>
-
-  <Link to="/blog" className="menu-link">
-    Blog <i className="bi bi-chevron-down"></i>
-  </Link>
-
-  <Link to="/contact" className="menu-link">
-    Contact
-  </Link>
-
-</div>
 
         {/* =========================
-    DONATE NOW / USER BUTTON
-========================== */}
-<div className="navbar-actions">
+            LOGO
+        ========================== */}
+        <Link to="/" className="navbar-brand bharath-logo">
+          <img
+            src="/NGO_logo.png"
+            alt="Bharath Charitable Foundation"
+            className="img-fluid"
+          />
+        </Link>
 
-  <Link
-    to="/donate"
-    className="donate-button"
-  >
-    <i className="bi bi-person"></i>
+        {/* =========================
+            MOBILE TOGGLE BUTTON
+        ========================== */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-    <span>BHARATH</span>
+        {/* =========================
+            NAVIGATION + ACTION
+        ========================== */}
+        <div
+          className="collapse navbar-collapse"
+          id="mainNavbar"
+        >
 
-    <i className="bi bi-arrow-up-right"></i>
-  </Link>
+          {/* NAVIGATION */}
+          <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
 
-  {/* Mobile menu */}
-  <button
-    className="menu-toggle"
-    type="button"
-  >
-    <span></span>
-    <span></span>
-  </button>
+            <li className="nav-item">
+              <Link to="/" className="nav-link menu-link">
+                Home
+                <i className="bi bi-chevron-down ms-1"></i>
+              </Link>
+            </li>
 
-</div>
+            <li className="nav-item">
+              <Link to="/donations" className="nav-link menu-link">
+                Donations
+                <i className="bi bi-chevron-down ms-1"></i>
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to="/events" className="nav-link menu-link">
+                Events
+                <i className="bi bi-chevron-down ms-1"></i>
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to="/pages" className="nav-link menu-link">
+                Pages
+                <i className="bi bi-chevron-down ms-1"></i>
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to="/blog" className="nav-link menu-link">
+                Blog
+                <i className="bi bi-chevron-down ms-1"></i>
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to="/contact" className="nav-link menu-link">
+                Contact
+              </Link>
+            </li>
+
+          </ul>
+
+          {/* =========================
+              BHARATH BUTTON
+          ========================== */}
+          <div className="navbar-actions">
+
+            <Link
+              to="/donate"
+              className="donate-button"
+            >
+              <i className="bi bi-person me-2"></i>
+
+              <span>BHARATH</span>
+
+              <i className="bi bi-arrow-up-right ms-2"></i>
+            </Link>
+
+          </div>
+
         </div>
       </div>
     </nav>

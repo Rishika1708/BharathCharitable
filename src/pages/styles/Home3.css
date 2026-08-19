@@ -295,3 +295,65 @@ h5.section-badge {
     align-items: flex-start;
   }
 }
+
+@media (max-width: 767px) {
+  .about-us-section {
+    padding: 55px 0;
+  }
+
+  .about-content {
+    margin-top: 28px;
+  }
+
+  .section-title {
+    font-size: clamp(30px, 8.5vw, 42px);
+  }
+
+  .video-play-wrapper {
+    right: 8px;
+    width: 116px;
+    height: 116px;
+  }
+
+  .video-play-btn {
+    width: 64px;
+    height: 64px;
+    font-size: 25px;
+  }
+
+  .feature-list-container .row {
+    row-gap: 14px;
+  }
+
+  .feature-item {
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .campaign-stat h3 {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 420px) {
+  .about-us-section {
+    padding-inline: 8px;
+  }
+
+  .video-play-wrapper {
+    width: 94px;
+    height: 94px;
+  }
+
+  .video-play-btn {
+    width: 54px;
+    height: 54px;
+    font-size: 20px;
+  }
+
+  .about-footer-row {
+    gap: 16px;
+  }
+}

@@ -28,6 +28,10 @@ button {
   font-family: inherit;
 }
 
+img {
+  max-width: 100%;
+}
+
 /* =========================================
    HERO HEADER
 ========================================= */
@@ -798,5 +802,134 @@ button {
 
   .hero-bottom-wave {
     height: 70px;
+  }
+}
+
+/* Mobile layout refinements. These rules only affect compact viewports. */
+@media (max-width: 991px) {
+  .donatia-navbar .container {
+    position: relative;
+  }
+
+  .navbar-toggler {
+    border-color: rgba(255, 191, 0, 0.7);
+    box-shadow: none;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 191, 0, 0.25);
+  }
+
+  .navbar-toggler-icon {
+    filter: invert(82%) sepia(72%) saturate(900%) hue-rotate(355deg);
+  }
+
+  .navbar-collapse {
+    margin-top: 12px;
+    padding: 12px 16px 16px;
+    background: rgba(6, 27, 21, 0.96);
+  }
+
+  .navbar-nav {
+    gap: 4px;
+  }
+
+  .menu-link {
+    padding: 10px 0;
+  }
+
+  .navbar-actions {
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  .bharath-logo {
+    width: min(245px, calc(100vw - 110px));
+    height: 80px;
+  }
+
+  .bharath-logo img {
+    width: 100%;
+    max-height: 70px;
+  }
+
+  .donatia-hero {
+    min-height: auto;
+    padding-bottom: 60px;
+  }
+
+  .hero-container {
+    padding-top: 92px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(38px, 11vw, 52px);
+    line-height: 1.02;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 28px;
+  }
+
+  .hero-discover-btn {
+    min-width: 0;
+    min-height: 58px;
+    padding: 0 22px;
+  }
+
+  .hero-image-wrapper {
+    height: 380px;
+    margin-top: 10px;
+  }
+
+  .child-image {
+    width: min(76vw, 290px);
+    height: 360px;
+  }
+
+  .splash-one {
+    width: 130px;
+    height: 130px;
+    right: 8%;
+  }
+
+  .splash-two {
+    width: 75px;
+    height: 75px;
+    left: 8%;
+  }
+
+  .hero-hand-animated {
+    left: -68px;
+    bottom: -12px;
+  }
+
+  .hero-hand-animated img {
+    width: 105px;
+  }
+}
+
+@media (max-width: 375px) {
+  .bharath-logo {
+    width: calc(100vw - 100px);
+  }
+
+  .navbar-toggler {
+    padding: 0.4rem 0.55rem;
+  }
+
+  .hero-script {
+    font-size: 22px;
+  }
+
+  .hero-image-wrapper {
+    height: 340px;
+  }
+
+  .child-image {
+    height: 325px;
   }
 }
